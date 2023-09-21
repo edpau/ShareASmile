@@ -9,6 +9,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import ErrorPage from './components/ErrorPage.jsx'
 import UserPage from './components/UserPage.jsx'
 import HomePage from './components/HomePage.jsx'
+import AddItemPage from './components/AddItemPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
         path: "/client/src/components/UserPage/:contactId",
         element: <UserPage />,
       }, 
+      {
+        path: "/client/src/components/AddItemPage",
+        element: <AddItemPage />,
+      },
     ],
   },
 ])
