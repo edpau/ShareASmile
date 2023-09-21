@@ -61,6 +61,40 @@
   margin: 5px 0px 5px 11px;
 }
 
+.ItemCardContainer{
+  border:1px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 400px;
+  max-height: 600px;
+  margin: 5px 0px 5px 11px;
+  overflow: scroll;
+}
+
+.ItemCardOwnerCon{
+  display: flex;
+}
+
+.ItemCard{
+  margin: 0px 3px 3px 3px;
+ 
+}
+
+.ItemCardImg{
+  border-radius: 6px;
+}
+
+
+
+.ItemCardOwnerImg{
+  margin: 5px 5px 5px 5px;
+  padding: 0px;
+  border-radius: 50%;
+  border:1px solid red;
+}
+
+
+
 .BottomNavBar{
   /* border:1px solid red; */
   display: flex;
