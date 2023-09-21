@@ -3,7 +3,7 @@ const mongoose = require("./index");
 const { Schema } = mongoose;
 
 const itemListingSchema = new Schema({
-  name: { type: String, required: true },
+  itemName: { type: String, required: true },
   dateAdded: { type: Date, default: Date.now, required: true },
   description: { type: String, default: "It is a toy", required: false }, //TODO change back to required: ture
   shareMethod: { type: String, default: "Meet Up", required: false }, //TODO change back to required: ture, make it into drop list
