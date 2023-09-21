@@ -8,16 +8,20 @@ import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import ErrorPage from './components/ErrorPage.jsx'
 import UserPage from './components/UserPage.jsx'
+import HomePage from './components/HomePage.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/client/src/components/UserPage/:contactId",
-    element: <UserPage />,
+    errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: <HomePage />},
+      {
+        path: "/client/src/components/UserPage/:contactId",
+        element: <UserPage />,
+      }, 
+    ],
   },
 ])
 
