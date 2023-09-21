@@ -5,6 +5,10 @@ import BottomNavBar from './components/BottomNavBar'
 import ItemCardContainer from './components/ItemCardContainer'
 
 
+
+
+
+
 function App() {
   const [count, setCount] = useState(0)
 
