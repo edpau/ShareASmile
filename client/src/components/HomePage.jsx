@@ -1,7 +1,13 @@
+import MainHeader from './MainHeader'
+import ItemCardContainer from './ItemCardContainer'
+
+
 export default function HomePage() {
   return (
     <div className="HomePage">
-        <p>Home Page</p>
+        <MainHeader heading = 'ShareASmile'></MainHeader>
+        <input className="searchBar" label="Search"/>
+        <ItemCardContainer></ItemCardContainer>
     </div>
   )
 }
