@@ -5,14 +5,14 @@ import ItemCardContainer from './ItemCardContainer'
 
 //get data
 import { useState, useEffect } from "react";
-import { getItems } from "../apiServics";
+import { getUserItems } from "../apiServics";
 
 export default function UserPage() {
 //get data
 const [items, setItem] = useState([]);
 
 useEffect(()=>{
-    getItems().then((data) => {
+  getUserItems().then((data) => {
         setItem(data)
     })
 }, [])

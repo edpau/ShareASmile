@@ -6,6 +6,13 @@ export async function getItems() {
   return data;
 }
 
+//TODO make it accept id 
+export async function getUserItems() {
+  const response = await fetch(`${url}/UserItems`);
+  const data = await response.json();
+  return data;
+}
+
 export async function addItem(item) {
   console.log('api post',item.lister)
   try {

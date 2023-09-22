@@ -15,7 +15,9 @@ async function getItems(req, res) {
 // getUserItems is for testing purpose
 async function getUserItems(req, res) {
   try {
-    const result = await Item.find({}).populate("lister", "userName");
+    const ss = await Item.where({lister: "650d69e16c9b8c1eadb250f4"})
+    console.log(ss, "ss")
+    const result = await Item.where({lister: "650d69e16c9b8c1eadb250f4"}).find({}).populate("lister", "userName");
     res.status(200);
     res.send(result);
   } catch (error) {
