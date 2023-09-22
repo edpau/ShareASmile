@@ -30,7 +30,7 @@ useEffect(()=>{
         />
       <div className='UserDetailCon'>
       <p>London, England, United Kingdom</p> 
-      <p>6 listing</p> 
+      <p>{items.length} listing</p>
       </div>
       <ItemCardContainer items={items} setItem={setItem}/>
 

@@ -1,7 +1,7 @@
 import ImageUtils from "./ImageUtils"
 import '../App.css'
 
-export default function ItemCard({item, width = 190, height = 190, dummyName}) {
+export default function ItemCard({item, width = 190, height = 190,}) {
 
   console.log(item)
 
@@ -26,7 +26,7 @@ export default function ItemCard({item, width = 190, height = 190, dummyName}) {
           width="30px"
           height="30px"
         />
-        <p>Edward Pau</p>
+        <p>{item.lister.userName}</p>
         </div>
         </div>
     </div>
