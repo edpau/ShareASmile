@@ -6,6 +6,21 @@ export async function getItems() {
   return data;
 }
 
+export async function getOneItem(itemId) {
+  try {
+  
+    const response = await fetch(`${url}/items/${itemId}`)
+
+    const data = await response.json();
+    return data;
+    
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+
+
 //TODO make it accept id 
 export async function getUserItems() {
   const response = await fetch(`${url}/UserItems`);

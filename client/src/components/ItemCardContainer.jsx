@@ -1,7 +1,6 @@
 import ItemCard from "./ItemCard";
 
 export default function ItemCardContainer({ items, setItem }) {
-  console.log(items, "items in container");
 
   return (
     <div className="ItemCardContainer">

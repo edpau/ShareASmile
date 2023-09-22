@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 
 export default function ItemCard({item, width = 190, height = 190,}) {
 
-  console.log(item)
-
   return (
     <div className="ItemCard">
      <Link to={"/ItemPage/"+item._id}>

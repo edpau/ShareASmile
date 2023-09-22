@@ -10,7 +10,7 @@ router.get("/items", itemListingController.getItems);
 router.post("/items", itemListingController.addItem);
 
 
-// getUserItems is for testing purpose
+router.get("/items/:id", itemListingController.getOneItem);
 router.get("/UserItems", itemListingController.getUserItems);
 
 
