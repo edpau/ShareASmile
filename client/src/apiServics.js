@@ -14,7 +14,6 @@ export async function getUserItems() {
 }
 
 export async function addItem(item) {
-  console.log('api post',item.lister)
   try {
     const response = await fetch(`${url}/items`, {
       method:"POST",

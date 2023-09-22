@@ -11,7 +11,7 @@ const itemListingSchema = new Schema({
   
   lister: {type: mongoose.Types.ObjectId, ref: "User"}, //TODO fix it
   
-  //image: ["string"],//TODO fix it
+  imageId: { type: String, default: "OKS67lh", required: false },//TODO fix it
   //condition: { type: String, default: "New", required: true },//TODO change back to required: ture, make it into drop list
   //likedByUsers:{} //TODO it is an array of users id who liked it
 
