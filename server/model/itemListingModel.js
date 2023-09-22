@@ -8,8 +8,10 @@ const itemListingSchema = new Schema({
   description: { type: String, default: "It is a toy", required: false }, //TODO change back to required: ture
   shareMethod: { type: String, default: "Meet Up", required: false }, //TODO change back to required: ture, make it into drop list
   category:  { type: String, default: "Toys", required: false }, //TODO change back to required: ture, make it into drop list
+  
+  lister: {type: mongoose.Types.ObjectId, ref: "User"}, //TODO fix it
+  
   //image: ["string"],//TODO fix it
-  //Lister: ObjectId (reference to user), //TODO fix it
   //condition: { type: String, default: "New", required: true },//TODO change back to required: ture, make it into drop list
   //likedByUsers:{} //TODO it is an array of users id who liked it
 

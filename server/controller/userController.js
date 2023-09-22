@@ -2,7 +2,7 @@ const User = require("../model/userModel");
 
 async function getUsers(req, res) {
   try {
-    const result = await User.find({});
+    const result = await User.find({}).populate("listedShare");
     res.status(200);
     res.send(result);
   } catch (error) {

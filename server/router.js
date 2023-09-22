@@ -10,5 +10,9 @@ router.get("/items", itemListingController.getItems);
 router.post("/items", itemListingController.addItem);
 
 
+// getUserItems is for testing purpose
+router.get("/UserItems", itemListingController.getUserItems);
+
+
 
 module.exports = router;

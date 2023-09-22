@@ -7,9 +7,12 @@ const userSchema = new Schema({
   dateJoined: { type: Date, default: Date.now, required: true },
   addressCity: { type: String, default: "London", required: false }, //TODO change back to required: ture
   addressCountry: { type: String, default: "United Kingdom", required: true },//TODO change back to required: ture
+
+
+  listedShare: [{type: mongoose.Types.ObjectId,  ref: "Item" }], //Todo fix: array of id
+
   //userPhoto: {type:String} //TODO fix:fileName?
   //likedShare: {type: } //Todo fix: array of id
-  //listedShare: {type: } //Todo fix: array of id
   
   /*
   !this data I don't want other users to see
