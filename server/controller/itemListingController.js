@@ -34,6 +34,8 @@ async function addItem(req, res) {
   try {
     const result = await Item.create(item);
    
+    console.log(item,"item")
+
     //this can update one
     //const re = await User.updateOne({_id: result.lister}, {listedShare: result._id})
     

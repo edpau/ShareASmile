@@ -7,7 +7,7 @@ export async function getItems() {
 }
 
 export async function addItem(item) {
-  console.log('api post',item)
+  console.log('api post',item.lister)
   try {
     const response = await fetch(`${url}/items`, {
       method:"POST",
@@ -17,7 +17,7 @@ export async function addItem(item) {
       },
       //TODO change to fit my app
       //body: JSON.stringify({title:topic.title, date: topic.date, venue:topic.venue}),
-      body: JSON.stringify({itemName:item.itemName}),
+     body: JSON.stringify({itemName:item.itemName, lister: item.lister}),
     });
     const data = await response.json();
     return data;

@@ -6,14 +6,18 @@ export default function AddItemPage() {
     event.preventDefault();
     console.log(event.target.itemName.value);
     const inputItemName = event.target.itemName.value;
+    const inputUserID = event.target.userID.value;
+    console.log(inputItemName, "inputItemName")
+    console.log(inputUserID, "inputUserID")
     // const inputDescription = event.target.description.value;
     // const inputShareMethod = event.target.shareMethod.value;
     // const inputCategory = event.target.category.value;
     //make an object pass to the server
     //TODO test ItemName first
-    const inputObj = { itemName: inputItemName };
+    //! hard code user id in here to test, later need to take away for log in 
+    const inputObj = { itemName: inputItemName, lister: inputUserID};
     //const inputObj = { title: inputTitle, venue: inputVenue, date: inputDate };
-
+    console.log(inputObj,"inputObj")
     //TODO addEvent work in router??
     addItem(inputObj)
       .then((data) => console.log(data, "data"))
@@ -41,12 +45,20 @@ export default function AddItemPage() {
             placeholder="What do you want to share?"
             required
           ></input>
+          <h2>User ID (testing)</h2>
+          <input
+            type="text"
+            name="userID"
+            className="inputField"
+            placeholder="userID testing only"
+            required
+          ></input>
 
-          {/* <div className="shareButCon"> */}
+          <div className="shareButCon">
           <button className="shareBut" type="submit">
             Share
           </button>
-          {/* </div> */}
+          </div>
         </form>
       </div>
     </div>
