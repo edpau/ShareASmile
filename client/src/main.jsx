@@ -10,6 +10,7 @@ import ErrorPage from './components/ErrorPage.jsx'
 import UserPage from './components/UserPage.jsx'
 import HomePage from './components/HomePage.jsx'
 import AddItemPage from './components/AddItemPage.jsx'
+import ItemPage from './components/ItemPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -19,13 +20,17 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage />},
       {
-        path: "/client/src/components/UserPage/:contactId",
+        path: "/UserPage/:contactId",
         element: <UserPage />,
       }, 
       {
-        path: "/client/src/components/AddItemPage",
+        path: "/AddItemPage",
         element: <AddItemPage />,
       },
+      {
+        path: "/ItemPage/:itemId",
+        element: <ItemPage />,
+      }, 
     ],
   },
 ])

@@ -1,12 +1,15 @@
 import ImageUtils from "./ImageUtils"
 import '../App.css'
 
+import { Link } from "react-router-dom";
+
 export default function ItemCard({item, width = 190, height = 190,}) {
 
   console.log(item)
 
   return (
     <div className="ItemCard">
+     <Link to={"/ItemPage/"+item._id}>
       <img 
           className="ItemCardImg"
           src={ImageUtils(item)}
@@ -14,6 +17,7 @@ export default function ItemCard({item, width = 190, height = 190,}) {
           width={width}
           height={height}
         />
+     </Link>
         <div className="ItemCardTextCon">
         {/* Todo use the item name */}
         {/* <p>{item.name}</p> */}
