@@ -2,19 +2,22 @@ import ImageUtils from "./ImageUtils"
 import '../App.css'
 
 export default function ItemCard({item, width = 190, height = 190, dummyName}) {
+
+  console.log(item)
+
   return (
     <div className="ItemCard">
       <img 
           className="ItemCardImg"
           src={ImageUtils(item)}
-          alt={item.name}
+          alt={item.itemName}
           width={width}
           height={height}
         />
         <div className="ItemCardTextCon">
         {/* Todo use the item name */}
         {/* <p>{item.name}</p> */}
-        <p>{dummyName}</p>
+        <p>{item.itemName}</p>
         <div className="ItemCardOwnerCon">
         <img 
           className="ItemCardOwnerImg"

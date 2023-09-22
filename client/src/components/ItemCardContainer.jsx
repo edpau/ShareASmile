@@ -1,6 +1,8 @@
 import ItemCard from "./ItemCard";
 
-export default function ItemCardContainer() {
+export default function ItemCardContainer({ items, setItem }) {
+  console.log(items, "items in container");
+
   return (
     <div className="ItemCardContainer">
       <ItemCard
@@ -10,42 +12,13 @@ export default function ItemCardContainer() {
           imageId: "OKS67lh",
         }}
       />
-      {/* later i will forEach from items, so need to delete it */}
-      <ItemCard
-        dummyName={"Lego Marvel 71039"}
-        item={{
-          name: "Aklilu Lemma",
-          imageId: "OKS67lh",
-        }}
-      />
-       <ItemCard
-        dummyName={"Lego Marvel 71039"}
-        item={{
-          name: "Aklilu Lemma",
-          imageId: "OKS67lh",
-        }}
-      />
-       <ItemCard
-        dummyName={"Lego Marvel 71039"}
-        item={{
-          name: "Aklilu Lemma",
-          imageId: "OKS67lh",
-        }}
-      />
-       <ItemCard
-        dummyName={"Lego Marvel 71039"}
-        item={{
-          name: "Aklilu Lemma",
-          imageId: "OKS67lh",
-        }}
-      />
-       <ItemCard
-        dummyName={"Lego Marvel 71039"}
-        item={{
-          name: "Aklilu Lemma",
-          imageId: "OKS67lh",
-        }}
-      />
+
+      {items.map((item)=>(
+        <ItemCard key={item._id} item={item} setItem={setItem}/>
+      ))
+
+      }
+
     </div>
   );
 }

@@ -3,7 +3,23 @@ import MainHeader from "./MainHeader";
 import ItemCardContainer from "./ItemCardContainer";
 import CategoryCircle from "./CategoryCircle";
 
+//get data
+import { useState, useEffect } from "react";
+import { getItems } from "../apiServics";
+
 export default function HomePage() {
+//get data
+    const [items, setItem] = useState([]);
+
+    useEffect(()=>{
+        getItems().then((data) => {
+            setItem(data)
+        })
+    }, [])
+
+    console.log(items)
+
+
   return (
     <div className="HomePage">
       <MainHeader heading="ShareASmile"></MainHeader>
@@ -53,7 +69,7 @@ export default function HomePage() {
         />
       </div>
 
-      <ItemCardContainer></ItemCardContainer>
+      <ItemCardContainer items={items} setItem={setItem}></ItemCardContainer>
     </div>
   );
 }
