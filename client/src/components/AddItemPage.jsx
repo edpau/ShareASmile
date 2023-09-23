@@ -9,10 +9,46 @@ import {Image} from "cloudinary-react"
 
 export default function AddItemPage() {
 
-  let imageId = "";
 
-  const handleSubmit = (event) => {
+  const [imageSelected, setImageSelected] = useState("")
+
+  //TODO move it to other folder move to new api service just for imageCloud
+    //add Photo to Cloudinary
+  const uploadImage = async () => {
+    // return new Promise((resolve) => {
+    const formData = new FormData();
+    formData.append("file", imageSelected);
+    formData.append("upload_preset", "uploadP")
+    
+const axiosRes= await Axios.post(
+      "https://api.cloudinary.com/v1_1/dtssx2anj/image/upload",
+      formData
+      )
+      console.log(axiosRes.data.secure_url)
+
+      return axiosRes.data.secure_url
+
+      
+      
+      // .then((response) => {
+      //   imageId = response.data.secure_url
+      //   //console.log(response.data.url, "URL")
+      //   console.log(imageId, "imageId")
+      //   console.log(response, "response")
+      //   console.log(response.data, "response.data")
+      //   console.log(response.data.secure_url, "response.data.secure_url")
+        
+      // });
+      // resolve();
+    // }) //promise
+    };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
+const imageId =  await uploadImage();  
+
+
+
     const inputItemName = event.target.itemName.value;
     const inputUserID = event.target.userID.value;
     // const inputDescription = event.target.description.value;
@@ -24,9 +60,9 @@ export default function AddItemPage() {
     const inputObj = { itemName: inputItemName, lister: inputUserID, imageId: imageId};
   
     //TODO addEvent work in router??
-    addItem(inputObj)
-      .then((data) => console.log(data, "data"))
-      .catch((e) => console.log(e));
+   await  addItem(inputObj) 
+      // .then((data) => console.log(data, "data frontend"))
+      // .catch((e) => console.log(e));
     // addEvent(inputObj).then((data) => {
     //   setEvent((previous) => {
     //     return sortFilterEvent([...previous, data]);
@@ -37,29 +73,7 @@ export default function AddItemPage() {
     // item.target.itemName.value = "";
   };
 
-    //TODO move it to other folder
-    //add Photo to Cloudinary
-
-    const [imageSelected, setImageSelected] = useState("")
-
-    const uploadImage = () => {
-      const formData = new FormData();
-      formData.append("file", imageSelected);
-      formData.append("upload_preset", "uploadP")
-      
-      Axios.post(
-        "https://api.cloudinary.com/v1_1/dtssx2anj/image/upload",
-        formData
-        ).then((response) => {
-          imageId = response.data.secure_url
-          console.log(response.data.url, "URL")
-          console.log(imageId, "imageId")
-          console.log(response, "response")
-          console.log(response.data, "response.data")
-          console.log(response.data.secure_url, "response.data.secure_url")
-          
-        });
-      };
+    
 
 
 
@@ -74,9 +88,9 @@ export default function AddItemPage() {
           setImageSelected(event.target.files[0]);
         }}
         />
-        <button onClick={uploadImage}>
+        {/* <button onClick={uploadImage}>
           Upload Image
-         </button>
+         </button> */}
         <Image 
         style = {{width: 200}}
         cloudName="dtssx2anj" publicId ="https://res.cloudinary.com/dtssx2anj/image/upload/v1695473857/chyflojfdyasi1fauvdi.png"/>

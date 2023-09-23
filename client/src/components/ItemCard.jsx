@@ -3,18 +3,25 @@ import '../App.css'
 
 import { Link } from "react-router-dom";
 
-export default function ItemCard({item, width = 190, height = 190,}) {
+import {Image, Transformation} from "cloudinary-react"
+
+export default function ItemCard({item, width = 190, height = 200,}) {
 
   return (
     <div className="ItemCard">
      <Link to={"/ItemPage/"+item._id}>
-      <img 
+
+     <Image  cloudName="dtssx2anj" publicId = {item.imageId}
+     width ="190" height="220">
+    </Image>
+
+      {/* <img 
           className="ItemCardImg"
           src={ImageUtils(item)}
           alt={item.itemName}
           width={width}
           height={height}
-        />
+        /> */}
      </Link>
         <div className="ItemCardTextCon">
         {/* Todo use the item name */}

@@ -38,9 +38,10 @@ export async function addItem(item) {
       },
       //TODO change to fit my app
       //body: JSON.stringify({title:topic.title, date: topic.date, venue:topic.venue}),
-     body: JSON.stringify({itemName:item.itemName, lister: item.lister}),
+     body: JSON.stringify({itemName:item.itemName, lister: item.lister, imageId: item.imageId}),
     });
     const data = await response.json();
+    console.log(data, "api data")
     return data;
     
   } catch (error) {
