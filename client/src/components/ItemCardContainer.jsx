@@ -1,5 +1,7 @@
 import ItemCard from "./ItemCard";
 
+import "../styles/ItemCardContainer.css"
+
 export default function ItemCardContainer({ items, setItem }) {
 
   return (

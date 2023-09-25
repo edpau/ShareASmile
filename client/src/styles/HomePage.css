@@ -1,7 +1,18 @@
+.searchBarCon{
+    background-color: white;
+}
+
+.searchBar {
+    min-width: 300px;
+    margin: 5px 0px 5px 10px;
+    background-color: rgb(69, 69, 69);
+}
+
 .CategoriesCon {
     display: flex;
     min-width: 410px;
     border: 1px red solid;
+    background-color: white;
 }
 
 .CatCon{

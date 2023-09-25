@@ -23,7 +23,9 @@ export default function HomePage() {
   return (
     <div className="HomePage">
       <MainHeader heading="ShareASmile"></MainHeader>
-      <input className="searchBar" label="Search" />
+      <div className="searchBarCon">
+      <input className="searchBar" type="search" placeholder="🔍 Search"/>
+      </div>
 
       {/* make the container simple first, fix later */}
       <div className="CategoriesCon">

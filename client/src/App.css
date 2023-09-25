@@ -22,6 +22,12 @@
 }
 
 
+
+
+
+
+
+
 .CategoryCircle{
   border:1px solid red;
 }
@@ -61,25 +67,11 @@
   margin: 5px 0px 5px 11px;
 }
 
-.ItemCardContainer{
-  border:1px solid blue;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 400px;
-  max-height: 600px;
-  margin: 5px 0px 5px 11px;
-  overflow: scroll;
-}
 
-.ItemCardOwnerCon{
-  display: flex;
-}
 
-.ItemCard{
-  margin: 0px 3px 3px 3px;
- 
-}
 
+
+/* no use, it is commented out */
 .ItemCardImg{
   border-radius: 6px;
 }
@@ -95,20 +87,4 @@
 
 
 
-.BottomNavBar{
-  /* border:1px solid red; */
-  display: flex;
-  justify-content: space-around;
-  
-}
 
-.BottomNavBarCon{
-  border:1px solid blue;
-  margin-top:auto;
-  min-height: 60px;
-}
-
-.image{
-  border:1px solid blue;
-  border-radius: 50%;
-}

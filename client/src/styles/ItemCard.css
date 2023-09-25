@@ -1,0 +1,19 @@
+.ItemCard{
+    margin: 0px 3px 3px 3px;
+   
+  }
+
+.ItemCardImg {
+    background-image: linear-gradient(white, rgb(238, 238, 238));
+}
+
+  .listerImage{
+    /* border:1px solid blue; */
+    border-radius: 50%;
+  }
+
+  .ItemCardOwnerCon{
+    display: flex;
+    gap: 8px;
+  }
+  

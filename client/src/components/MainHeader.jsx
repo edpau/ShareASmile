@@ -1,3 +1,5 @@
+import "../styles/MainHeader.css"
+
 export default function MainHeader({heading}) {
   return (
     <div className="MainHeader">
