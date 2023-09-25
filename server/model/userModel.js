@@ -5,8 +5,8 @@ const { Schema } = mongoose;
 const userSchema = new Schema({
   userName: { type: String, required: true },
   dateJoined: { type: Date, default: Date.now, required: true },
-  addressCity: { type: String, default: "London", required: false }, //TODO change back to required: ture
-  addressCountry: { type: String, default: "United Kingdom", required: true },//TODO change back to required: ture
+  addressCity: { type: String, default: "London", required: false }, //TODO change back to required: true
+  addressCountry: { type: String, default: "United Kingdom", required: true },//TODO change back to required: true
   userImageURL: {type: String, default: "https://res.cloudinary.com/dtssx2anj/image/upload/v1695488858/pr0ecobii6rekn5mkfqe.jpg", required: false},
 
 

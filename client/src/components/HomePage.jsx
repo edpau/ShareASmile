@@ -3,6 +3,8 @@ import MainHeader from "./MainHeader";
 import ItemCardContainer from "./ItemCardContainer";
 import CategoryCircle from "./CategoryCircle";
 
+import "../styles/HomePage.css"
+
 //get data
 import { useState, useEffect } from "react";
 import { getItems } from "../apiServics";
@@ -22,7 +24,36 @@ export default function HomePage() {
     <div className="HomePage">
       <MainHeader heading="ShareASmile"></MainHeader>
       <input className="searchBar" label="Search" />
-      <div className="CategoryCircleCon">
+
+      {/* make the container simple first, fix later */}
+      <div className="CategoriesCon">
+        <div className="CatCon">
+      <h1>📚</h1> 
+      <h6>Books</h6> 
+      </div>
+      <div className="CatCon">
+      <h1>🧸</h1> 
+      <h6>Toys</h6> 
+      </div>
+      <div className="CatCon">
+      <h1>📱</h1> 
+      <h6>Elec.</h6> 
+      </div>
+      <div className="CatCon">
+      <h1>👔</h1> 
+      <h6>Fashion</h6> 
+      </div>
+      <div className="CatCon">
+      <h1>🛋️</h1> 
+      <h6>Home</h6> 
+      </div>
+      </div>
+
+
+
+
+      {/* this will be used in the future */}
+      {/* <div className="CategoryCircleCon">
         <CategoryCircle
           //size={100}
           dummyName={"Books"}
@@ -65,7 +96,7 @@ export default function HomePage() {
             imageId: "OKS67lh",
           }}
         />
-      </div>
+      </div> */}
 
       <ItemCardContainer items={items} setItem={setItem}></ItemCardContainer>
     </div>

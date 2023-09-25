@@ -3,6 +3,10 @@ import ImageUtils from "./ImageUtils"
 import CategoryCircle from './CategoryCircle'
 import ItemCardContainer from './ItemCardContainer'
 
+import '../styles/userPage.css'
+
+import {Image, Transformation} from "cloudinary-react"
+
 //get data
 import { useState, useEffect } from "react";
 import { getUserItems } from "../apiServics";
@@ -20,15 +24,13 @@ useEffect(()=>{
   return (
     <div className="UserPage">
       <MainHeader heading = 'User'></MainHeader>
-      <CategoryCircle
-          //size={100}
-          dummyName={"edpau"}
-          item={{
-            name: "Aklilu Lemma",
-            imageId: "OKS67lh",
-          }}
-        />
+
+      <Image className = "UserPageUserImage" cloudName="dtssx2anj" publicId = "https://res.cloudinary.com/dtssx2anj/image/upload/v1695488858/pr0ecobii6rekn5mkfqe.jpg"
+     >
+    </Image>
+
       <div className='UserDetailCon'>
+      <p>@edpau</p>
       <p>London, England, United Kingdom</p> 
       <p>{items.length} listing</p>
       </div>
