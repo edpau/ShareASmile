@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import {Image, Transformation} from "cloudinary-react"
 
 export default function ItemCard({item, width = 190, height = 200,}) {
-
+  console.log(item,"item in user")
   return (
     <div className="ItemCard">
      <Link to={"/ItemPage/"+item._id}>
@@ -29,7 +29,7 @@ export default function ItemCard({item, width = 190, height = 200,}) {
         <p>{item.itemName}</p>
         <div className="ItemCardOwnerCon">
 
-      <Image className= "image" cloudName="dtssx2anj" publicId = {item.imageId}
+      <Image className= "image" cloudName="dtssx2anj" publicId = {item.lister.userImageURL}
      width ="30" height="30"  >
     </Image>
         {/* <img 

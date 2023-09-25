@@ -30,7 +30,7 @@ async function getOneItem(req, res) {
 
 async function getUserItems(req, res) {
   try {
-    const result = await Item.where({lister: "650d69e16c9b8c1eadb250f4"}).find({}).populate("lister", "userName");
+    const result = await Item.where({lister: "650d69e16c9b8c1eadb250f4"}).find({}).populate("lister");
     res.status(200);
     res.send(result);
   } catch (error) {
