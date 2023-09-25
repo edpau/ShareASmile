@@ -28,13 +28,17 @@ export default function ItemCard({item, width = 190, height = 200,}) {
         {/* <p>{item.name}</p> */}
         <p>{item.itemName}</p>
         <div className="ItemCardOwnerCon">
-        <img 
+
+      <Image className= "image" cloudName="dtssx2anj" publicId = {item.imageId}
+     width ="30" height="30"  >
+    </Image>
+        {/* <img 
           className="ItemCardOwnerImg"
           src={ImageUtils(item)}
           alt={item.name}
           width="30px"
           height="30px"
-        />
+        /> */}
         <p>{item.lister.userName}</p>
         </div>
         </div>

@@ -107,3 +107,8 @@
   margin-top:auto;
   min-height: 60px;
 }
+
+.image{
+  border:1px solid blue;
+  border-radius: 50%;
+}

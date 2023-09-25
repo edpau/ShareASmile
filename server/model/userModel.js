@@ -7,6 +7,7 @@ const userSchema = new Schema({
   dateJoined: { type: Date, default: Date.now, required: true },
   addressCity: { type: String, default: "London", required: false }, //TODO change back to required: ture
   addressCountry: { type: String, default: "United Kingdom", required: true },//TODO change back to required: ture
+  userImageURL: {type: String, default: "https://res.cloudinary.com/dtssx2anj/image/upload/v1695488858/pr0ecobii6rekn5mkfqe.jpg", required: false},
 
 
   listedShare: [{type: mongoose.Types.ObjectId,  ref: "Item" }], //Todo fix: array of id
