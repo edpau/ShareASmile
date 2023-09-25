@@ -4,15 +4,17 @@
 }
 
 #root {
-  max-width: 400px;
-  min-width: 350px;
+  min-height: 860px;
+  max-height: 860px;
 }
 
 .App {
-  min-width: 400px;
+  min-width: 422px;
+  max-width: 422px;
   /* height:100vh; */
-  min-height: 800px;
-  border:1px solid red;
+  min-height: 860px;
+  max-height: 860px;
+  border:1px solid black;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -29,7 +31,7 @@
 
 
 .CategoryCircle{
-  border:1px solid red;
+  /* border:1px solid red; */
 }
 
 .CategoryCircleImg {
@@ -37,11 +39,11 @@
   margin: 5px 5px 0px 5px;
   padding: 0px;
   border-radius: 50%;
-  border:1px solid red;
+  /* border:1px solid red; */
 }
 
 .CategoryCircle p {
-  border:1px solid red;
+  /* border:1px solid red; */
   margin: 0px 0px 0px 5px;
   padding: 0px;
   color: red;

@@ -1,3 +1,5 @@
+
+
 .searchBarCon{
     background-color: white;
 }
@@ -11,14 +13,14 @@
 .CategoriesCon {
     display: flex;
     min-width: 410px;
-    border: 1px red solid;
+    /* border: 1px red solid; */
     background-color: white;
 }
 
 .CatCon{
     min-width: 82px;
     max-width: 82px;
-    border: 1px red solid;
+    /* border: 1px red solid; */
     text-align: center;
 }
 

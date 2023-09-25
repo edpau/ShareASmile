@@ -25,9 +25,12 @@ useEffect(()=>{
     <div className="UserPage">
       <MainHeader heading = 'User'></MainHeader>
 
+      <div className = "UserPageUserImageCon">
       <Image className = "UserPageUserImage" cloudName="dtssx2anj" publicId = "https://res.cloudinary.com/dtssx2anj/image/upload/v1695488858/pr0ecobii6rekn5mkfqe.jpg"
      >
-    </Image>
+       </Image>
+      </div>
+
 
       <div className='UserDetailCon'>
       <p>@edpau</p>

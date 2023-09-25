@@ -1,9 +1,11 @@
-import '../App.css'
+import '../styles/ItemPage.css'
 import { useParams } from 'react-router-dom'
 
 //get data
 import { useState, useEffect } from "react";
 import { getOneItem } from "../apiServics"
+
+import {Image, Transformation} from "cloudinary-react"
 
 export default function ItemPage() {
 
@@ -27,8 +29,28 @@ useEffect(()=>{
 
   return (
     <div className="ItemPage">
-    <p>ItemPage</p>
-   <p>{item.itemName}</p>
+      <Image  cloudName="dtssx2anj" publicId = {item.imageId}
+     width ="422" height="400">
+    </Image>
+    <div className='ItemTextCon'>
+   <h1>{item.itemName}</h1>
+   <p>🗂️{item.category}</p>
+   <p>📍{item.shareMethod}</p>
+   {/* learn this line, as lister data come a bit later than the rest of the data */}
+   {item.lister&&<p>➕Shared by {item.lister.userName}</p>}
+   <p>{item.dateAdded}</p>
+   <p>Description: </p>
+   <div className='DescriptionTextBox'>
+    <p>{item.description}</p>
+
+   </div>
+    </div>
+    <div className='buttonCon'>
+    {item.lister&&<button type="button">Message @{item.lister.userName}</button>}
+
+    </div>
+
+
     </div>
   )
 }

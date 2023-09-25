@@ -28,13 +28,13 @@ export default function ItemCard({item, width = 190, height = 200,}) {
         <div className="ItemCardTextCon">
         {/* Todo use the item name */}
         {/* <p>{item.name}</p> */}
-        <p>{item.itemName}</p>
+        <h1>{item.itemName}</h1>
         <div className="ItemCardOwnerCon">
 
       <Image className= "listerImage" cloudName="dtssx2anj" publicId = {item.lister.userImageURL}
      width ="30" height="30"  >
     </Image>
-        <p>{item.lister.userName}</p>
+        <h2>{item.lister.userName}</h2>
         </div>
         </div>
     </div>
