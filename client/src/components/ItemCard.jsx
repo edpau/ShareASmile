@@ -14,7 +14,7 @@ export default function ItemCard({item, width = 190, height = 200,}) {
       <div className="ItemCardImg">
      <Link to={"/ItemPage/"+item._id}>
      <Image  cloudName="dtssx2anj" publicId = {item.imageId}
-     width ="190" height="220">
+     width ="180" height="220">
     </Image>
       {/* <img 
           className="ItemCardImg"
