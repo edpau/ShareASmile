@@ -38,7 +38,8 @@ useEffect(()=>{
    <p>📍{item.shareMethod}</p>
    {/* learn this line, as lister data come a bit later than the rest of the data */}
    {item.lister&&<p>➕Shared by {item.lister.userName}</p>}
-   <p>{item.dateAdded}</p>
+   {/* //TODO add back time later */}
+   {/* <p>{item.dateAdded}</p> */}
    <p>Description: </p>
    <div className='DescriptionTextBox'>
     <p>{item.description}</p>

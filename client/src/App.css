@@ -4,31 +4,24 @@
 }
 
 #root {
-  min-height: 860px;
-  max-height: 860px;
+  /* min-height: 820px;
+  max-height: 820px; */
 }
 
 .App {
   min-width: 422px;
   max-width: 422px;
   /* height:100vh; */
-  min-height: 860px;
-  max-height: 860px;
+  min-height: 800px;
+  max-height: 800px;
   border:1px solid black;
-  position: fixed;
+  position: relative;
   top: 0px;
   left: 0px;
   display:flex;
   flex-direction: column;
   background-color: #f2f3f4;
 }
-
-
-
-
-
-
-
 
 .CategoryCircle{
   /* border:1px solid red; */

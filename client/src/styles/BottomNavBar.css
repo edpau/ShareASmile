@@ -4,6 +4,10 @@
     justify-content: space-around;
     padding: 10px;
     background-color: white;
+    z-index: 3;
+    position: absolute;
+    bottom: 0px;
+    min-width: 400px;
   }
   
   .BottomNavBarCon{
