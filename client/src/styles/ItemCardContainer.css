@@ -4,7 +4,9 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 400px;
-    max-height: 600px;
+    max-height: 69vh;
     margin: 5px 5px 5px 11px;
     overflow: scroll;
+    /* margin-bottom: 20px; */
+    /* background-color: red; */
   }
