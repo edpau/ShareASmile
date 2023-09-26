@@ -46,7 +46,9 @@ export default function AddItemPage() {
     const imageId = await uploadImage();
 
     const inputItemName = event.target.itemName.value;
-    const inputUserID = event.target.userID.value;
+    // use for testing only
+    // const inputUserID = event.target.userID.value;
+    const inputUserID = "650d69e16c9b8c1eadb250f4";
     const inputDescription = event.target.descriptionTextarea.value;
     // const inputShareMethod = event.target.shareMethod.value;
     const selectedShareMethod = document.querySelector('input[name="shareMethod"]:checked').value;
@@ -104,14 +106,15 @@ export default function AddItemPage() {
             required
           ></input>
           
-          <h2>User ID (testing)</h2>
+          {/* testing use only */}
+          {/* <h2>User ID (testing)</h2>
           <input
             type="text"
             name="userID"
             className="inputField"
             placeholder="userID testing only"
             required
-          ></input>
+          ></input> */}
 
           <h2>Category</h2>
           {/* //TODO make value to small capital letter */}
