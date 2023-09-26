@@ -4,9 +4,13 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 400px;
-    max-height: 69vh;
+    max-height: 68vh;
     margin: 5px 5px 5px 11px;
     overflow: scroll;
     /* margin-bottom: 20px; */
     /* background-color: red; */
   }
+
+  .ItemCardContainer::-webkit-scrollbar {
+    display: none;
+}
