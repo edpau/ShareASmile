@@ -47,7 +47,7 @@ useEffect(()=>{
    </div>
     </div>
     <div className='buttonCon'>
-    {item.lister&&<button className='button-54' type="button">Message @{item.lister.userName}</button>}
+    {item.lister&&item.lister.userName !== "edpau"&&<button className='button-54' type="button">Message @{item.lister.userName}</button>}
 
     </div>
 
