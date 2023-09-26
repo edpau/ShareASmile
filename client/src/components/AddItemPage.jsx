@@ -87,36 +87,40 @@ export default function AddItemPage() {
           <h2>Sharing Title</h2>
           <input
             type="text"
+            id = "inputTitle"
             name="itemName"
             className="inputField"
             placeholder="Dear, what do you want to share?"
             required
           ></input>
-          <h2>User ID (testing)</h2>
+          
+          {/* <h2>User ID (testing)</h2>
           <input
             type="text"
             name="userID"
             className="inputField"
             placeholder="userID testing only"
             required
-          ></input>
+          ></input> */}
 
           <h2>Category</h2>
+          {/* //TODO make value to small capital letter */}
           <select name = "category" className="inputField" required>
-            <option value="books">Books</option>
-            <option value="toys">Toys</option>
-            <option value="elec.">Elec.</option>
-            <option value="fashion">Fashion</option>
-            <option value="home">Home</option>
+            <option value="Books">Books</option>
+            <option value="Toys">Toys</option>
+            <option value="Elec.">Elec.</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Home">Home</option>
           </select>
 
           <div className="custom-radio">
           <h2>Share Method</h2>
-         
-         <input type="radio" id="meetup" name="shareMethod" value="meetup" required></input>
-         <label for="meetup">Meet Up</label>
-         <input type="radio" id="mailing" name="shareMethod" value="mailing" required></input>
-         <label for="meetup">Meet Up</label>
+         {/* //TODO  make value to small capital letter and one word*/}
+         <input type="radio" id="meetup" name="shareMethod" value="Meet up" required></input>
+         <label for="meetup"> Meet Up</label>
+         <br></br>
+         <input type="radio" id="post" name="shareMethod" value="Post" required></input>
+         <label for="post"> Post</label>
 
           </div>
 
@@ -127,14 +131,19 @@ export default function AddItemPage() {
           className="inputField"
           placeholder="Enter a description"
           rows="6"
-
+          id="descriptionTextarea"
           ></textarea>
 
 
           <div className="AddImage">
-            <h2>Add a photo</h2>
+            {/* <h2>Add a photo</h2> */}
+            <label htmlFor="files" className="addPhotoBtn">
+              📷 Add a photo +
+            </label>
             <input
               type="file"
+              className="addPhoto"
+              id="files"
               onChange={(event) => {
                 setImageSelected(event.target.files[0]);
               }}
@@ -146,7 +155,7 @@ export default function AddItemPage() {
           </div>
 
           <div className="shareButCon">
-            <button className="shareBut" type="submit">
+            <button className="button-54" type="submit">
               Share
             </button>
           </div>

@@ -30,7 +30,7 @@ useEffect(()=>{
   return (
     <div className="ItemPage">
       <Image  cloudName="dtssx2anj" publicId = {item.imageId}
-     width ="422" height="400">
+     width ="422" height="360">
     </Image>
     <div className='ItemTextCon'>
    <h1>{item.itemName}</h1>
@@ -47,7 +47,7 @@ useEffect(()=>{
    </div>
     </div>
     <div className='buttonCon'>
-    {item.lister&&<button type="button">Message @{item.lister.userName}</button>}
+    {item.lister&&<button className='button-54' type="button">Message @{item.lister.userName}</button>}
 
     </div>
 
