@@ -30,7 +30,7 @@ useEffect(()=>{
   return (
     <div className="ItemPage">
       <Image  cloudName="dtssx2anj" publicId = {item.imageId}
-     width ="422" height="360">
+     width ="422" height="370">
     </Image>
     <div className='ItemTextCon'>
    <h1>{item.itemName}</h1>
