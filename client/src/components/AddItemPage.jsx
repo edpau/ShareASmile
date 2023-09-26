@@ -74,7 +74,11 @@ export default function AddItemPage() {
     // });
 
     //clear the box after input
-    // item.target.itemName.value = "";
+    event.target.itemName.value = "";
+   // event.target.userID.value = "";
+    event.target.descriptionTextarea.value = "";
+    document.getElementById('meetup').checked = true;
+    event.target.category.value = "Books";
   };
 
   return (
