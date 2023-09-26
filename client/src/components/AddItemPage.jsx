@@ -47,9 +47,10 @@ export default function AddItemPage() {
 
     const inputItemName = event.target.itemName.value;
     const inputUserID = event.target.userID.value;
-    // const inputDescription = event.target.description.value;
+    const inputDescription = event.target.descriptionTextarea.value;
     // const inputShareMethod = event.target.shareMethod.value;
-    // const inputCategory = event.target.category.value;
+    const selectedShareMethod = document.querySelector('input[name="shareMethod"]:checked').value;
+    const inputCategory = event.target.category.value;
     //make an object pass to the server
     //TODO test ItemName first
     //! hard code user id in here to test, later need to take away for log in
@@ -57,6 +58,9 @@ export default function AddItemPage() {
       itemName: inputItemName,
       lister: inputUserID,
       imageId: imageId,
+      description: inputDescription,
+      shareMethod: selectedShareMethod,
+      category: inputCategory,
     };
 
     //TODO addEvent work in router??
@@ -94,14 +98,14 @@ export default function AddItemPage() {
             required
           ></input>
           
-          {/* <h2>User ID (testing)</h2>
+          <h2>User ID (testing)</h2>
           <input
             type="text"
             name="userID"
             className="inputField"
             placeholder="userID testing only"
             required
-          ></input> */}
+          ></input>
 
           <h2>Category</h2>
           {/* //TODO make value to small capital letter */}
