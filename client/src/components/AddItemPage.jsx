@@ -79,6 +79,8 @@ export default function AddItemPage() {
     event.target.descriptionTextarea.value = "";
     document.getElementById('meetup').checked = true;
     event.target.category.value = "Books";
+
+    window.alert("Item shared successfully!"); 
   };
 
   return (
