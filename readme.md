@@ -1,49 +1,29 @@
-## Project name
+# ShareASmile
+Share your products and skills with others, and receive a smile in return.
 
-ShareASmile
+## Description
+"ShareASmile" is an app designed to inspire individuals to share both their possessions (whether new, old, or unwanted) and their valuable skills. Simultaneously, it serves as a platform for connecting with others and encourages people to engage with the wider world. Users on ShareASmile can share their interests and extend acts of kindness and love to others.
 
-
-
-## One liner
-
-Share products and skills with people. In return for a smile.
-
-
-
-## Project description
-
-ShareASmile is an app that encourages people to share (new/old/unwant) things or useful skills, and at the same time connect with people, it encourages people to reach out to the world. People share their interest with people in ShareASmile. Share love with people.
-
-
-
-## MVP
-
-1. Home page- User can browse what other users want to share in categories.
-2. Add share page- User can add his share onto the home page and his own user page.
-3. User page- User can view what their current share listing and past share listing/ same page recycle to view members' listing. User can delete the current share, change the current share to shared status.
-4. Share item page- User can view each individual share product/service, see who share it and send email to contact the specific member for the share.
-
-
+## Guide
+1. Home Page: Users can easily peruse shared items across various categories.
+2. Share Addition Page: Users have the option to contribute their own items to both the Home Page and their personal User Page.
+3. User Profile: Users can access their current and previous listings on their User Page, which can also be used to review other members' offerings. Users can modify their current listings or mark them as "shared."
+4. Share Item Details: Users can access detailed information about each shared product or service, identify the contributor, and contact the specific member by email to discuss the item further.
 
 ## Tech stack
 
-**Front End:**
+**Frontend:**
+- React
+- Vite
 
-React
-
-Vite
-
-
-
-**Back End:**
-
-Express
-MongoDB
-
-
+**Backend:**
+- Express
+- MongoDB
 
 ## Data sources
+- cloudinary- Store listing items photo
 
-cloudinary- Store items photo
-
+## Installation
+- Run `npm i` on both client and server folder
+- Run `npm run dev` on client folder and nodemon index.js on the server folder.
 
